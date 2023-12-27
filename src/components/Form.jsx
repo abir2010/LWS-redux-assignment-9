@@ -14,7 +14,7 @@ export default function Form() {
       <div className="fieldContainer">
         <label>Assign To</label>
         <select name="teamMember" id="lws-teamMember" required>
-          <option value hidden selected>
+          <option value hidden defaultChecked>
             Select Job
           </option>
           <option>Sumit Saha</option>
@@ -29,7 +29,7 @@ export default function Form() {
       <div className="fieldContainer">
         <label htmlFor="lws-projectName">Project Name</label>
         <select id="lws-projectName" name="projectName" required>
-          <option value hidden selected>
+          <option value hidden defaultChecked>
             Select Project
           </option>
           <option>Scoreboard</option>

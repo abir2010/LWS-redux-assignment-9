@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function AddTaskHeader() {
   return (
     <div className="justify-between mb-10 space-y-2 md:flex md:space-y-0">
-      <a href="./AddNew.html" className="lws-addnew group">
+      <Link to="/add-task" className="lws-addnew group">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -17,7 +19,7 @@ export default function AddTaskHeader() {
           />
         </svg>
         <span className="group-hover:text-indigo-500">Add New</span>
-      </a>
+      </Link>
     </div>
   );
 }
