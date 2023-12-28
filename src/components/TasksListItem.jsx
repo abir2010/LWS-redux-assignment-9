@@ -41,6 +41,7 @@ export default function TasksListItem({ task }) {
   };
 
   const handleDelete = () => {
+    console.log(task.id);
     deleteTask(task.id);
   };
 
