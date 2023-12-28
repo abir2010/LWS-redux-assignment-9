@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import logoImg from "../assets/images/logo.svg";
+import logoImg from "../images/logo.svg";
 
 export default function Navbar({ searchText, setSearchText }) {
   return (

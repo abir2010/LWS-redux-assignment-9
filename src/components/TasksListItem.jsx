@@ -9,7 +9,6 @@ import {
 } from "../features/tasks/tasksApi";
 
 export default function TasksListItem({ task }) {
-  const [display, setDisplay] = useState({});
   const [stat, setStat] = useState("pending");
 
   const { taskName, teamMember, project, deadline, status, id } = task || {};
@@ -19,11 +18,6 @@ export default function TasksListItem({ task }) {
   const [editTaskByStatus, { data: updatedTask }] =
     useEditTaskByStatusMutation();
   const [deleteTask, { data: deletedTask }] = useDeleteTaskMutation();
-
-  const img = `../assets${avatar}`;
-  useEffect(() => {
-    import(/* @vite-ignore */ img).then((img) => setDisplay(img.default));
-  }, [img]);
 
   useEffect(() => {
     if (status) setStat(status);
@@ -57,7 +51,7 @@ export default function TasksListItem({ task }) {
       </div>
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2">
-          <img src={display} className="team-avater" />
+          <img src={avatar} className="team-avater" />
           <p className="lws-task-assignedOn">{name}</p>
         </div>
         {stat === "completed" ? (
