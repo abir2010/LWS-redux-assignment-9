@@ -7,13 +7,12 @@ import { useState } from "react";
 
 export default function Home() {
   const [searchText, setSearchText] = useState("");
-  const [projectList, setProjectList] = useState([]);
   return (
     <div>
       <Navbar searchText={searchText} setSearchText={setSearchText} />
       <div className="container relative">
         <div className="sidebar">
-          <ProjectsList  />
+          <ProjectsList />
           <TeamList />
         </div>
         <div className="lg:pl-[16rem] 2xl:pl-[23rem]">
